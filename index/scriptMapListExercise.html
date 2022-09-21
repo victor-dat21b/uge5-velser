@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Numbers</h2>
+    <ul id="ul-numbers"></ul>
+
+
+    <script>
+        const numbers = [1, 56, 34, 87, 9, 89, 560, 245]
+        const numbersAsListItems = numbers.map(number => `<li>${encode((""+str))}</li>`);
+        const asString = numbersAsListItems.join("")
+        console.log(numbersAsListItems)
+        const ul = document.getElementById("ul-numbers").innerHTML = asString;
+
+
+        function encode(str){
+        str = str.replace(/&/g, "&amp;")
+        str = str.replace(/>/g, "&gt;")
+        str = str.replace(/</g, "&lt;")
+        str = str.replace(/"/g, "&quot;")
+        str = str.replace(/'/g, "&#039;")
+        return str
+    }
+    </script>
+</body>
+</html>
