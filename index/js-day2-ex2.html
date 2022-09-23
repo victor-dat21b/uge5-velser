@@ -5,27 +5,26 @@ git<!DOCTYPE html>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .myDivs {width: 25px; height: 25px;background-color:rgb(255, 0, 0); margin:1px;}
-      </style>
+    
      
 </head>
 <body>
+    
     <h2>Exercise-2</h2>
-
-    <div class="myDivs" onclick="onClick1()" id="div1"></div>
-    <div class="myDivs" onclick="onClick2()" id="div2"></div>
-    <div class="myDivs" onclick="onClick1()" id="div3"></div>
-    <div class="myDivs" onclick="onClick2()" id="div4"></div>
-    <div class="myDivs" onclick="onClick1()" id="div5"></div>
-    <div class="myDivs" onclick="onClick2()" id="div6"></div>
-    <div class="myDivs" onclick="onClick1()" id="div7"></div>
-    <div class="myDivs" onclick="onClick2()" id="div8"></div>
-
-
-
-<script>
-
+    <div id="allDivs">
+        <div class="myDivs" onclick="onClick1()" id="div1"></div>
+        <div class="myDivs" onclick="onClick2()" id="div2"></div>
+        <div class="myDivs" onclick="onClick1()" id="div3"></div>
+        <div class="myDivs" onclick="onClick2()" id="div4"></div>
+        <div class="myDivs" onclick="onClick1()" id="div5"></div>
+        <div class="myDivs" onclick="onClick2()" id="div6"></div>
+        <div class="myDivs" onclick="onClick1()" id="div7"></div>
+        <div class="myDivs" onclick="onClick2()" id="div8"></div>
+    </div>
+    
+    
+    <script>
+        
 
 function onClick1(){
     console.log("Hello from div 1")
@@ -33,8 +32,20 @@ function onClick1(){
 function onClick2(){
     console.log("Hello from div 2")
 }
+
+
 </script>
 
-    
+<style>
+    .myDivs {width: 25px; height: 25px;background-color:rgb(255, 0, 0); margin:1px;}
+  </style>
+
+<style>
+    #allDivs {width: 500px;background-color:rgb(38, 67, 44); margin:1px;}
+    </style>
+
+
+
 </body>
+<script src="../js2.js" type="module"></script>
 </html>
