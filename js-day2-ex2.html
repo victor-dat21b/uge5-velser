@@ -36,6 +36,12 @@ function onClick2(){
     console.log("Hello from div 2")
 }
 
+var button = document.getElementById("allDivs");
+button.addEventListener('click',clickMe, true);
+
+function clickMe(e) {
+    document.getElementById("myPTag").innerHTML = "This is a message from " + e.target.id;
+}
 
 </script>
 
@@ -50,5 +56,5 @@ function onClick2(){
 
 
 </body>
-<script src="../js2.js" type="module"></script>
+<script src="js2.js" type="module"></script>
 </html>
