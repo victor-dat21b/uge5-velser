@@ -1,6 +1,6 @@
 var button = document.getElementById("allDivs");
-button.addEventListener('click',clickMe);
+button.addEventListener('click',clickMe, true);
 
 function clickMe(e) {
-    console.log("Message", e.target)
+    document.getElementById("myPTag").innerHTML = "This is a message from " + e.target.id;
 }
