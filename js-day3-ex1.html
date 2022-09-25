@@ -7,7 +7,58 @@
     <title>Document</title>
 </head>
 <body>
-    <p>hello</p>
+    <div id="myid">
+    </div>
     
+        <form>
+        <div><input id="findUser" placeholder="Find user"></div>
+        <button id="getData">Get data</button>
+        <button id="getAll"> Get all users</button>
+        </form>
+
+
+
+
+
+
+    <script>
+
+
+
+    function displayData(data){
+
+        var result = JSON.stringify(data);
+        document.getElementById("myid").innerHTML = result;
+    }
+
+    document.getElementById("getAll").onclick = (evt) =>{
+        evt.preventDefault();
+        let url = "https://jsonplaceholder.typicode.com/users/"
+        fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            displayData(data)
+    })
+}
+
+
+    document.getElementById("getData").onclick = (evt) => {
+        evt.preventDefault();
+        const value = document.getElementById("findUser").value
+        let url = "https://jsonplaceholder.typicode.com/users/" + value;
+        fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            displayData(data)
+  })
+    }
+    
+
+   
+
+
+
+
+    </script>
 </body>
 </html>
